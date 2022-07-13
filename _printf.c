@@ -1,9 +1,7 @@
 #include "main.h"
-
 /**
  * _printf - function my printf
  * @format: string whit format to print
- *
  * Return: number of chars that print
  */
 int _printf(const char *format, ...)
@@ -12,9 +10,7 @@ int _printf(const char *format, ...)
 	const char *p;
 	va_list arguments;
 	flags_t flags = {0, 0, 0};
-
 	register int count = 0;
-
 	va_start(arguments, format);
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
@@ -42,5 +38,4 @@ int _printf(const char *format, ...)
 	_putchar(-1);
 	va_end(arguments);
 	return (count);
-
 }
